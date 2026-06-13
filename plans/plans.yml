@@ -1,0 +1,67 @@
+name: NHS Digital API Plans
+description: >-
+  NHS England Digital APIs are provided free of charge to healthcare
+  organisations, technology suppliers, and developers who complete the NHS
+  onboarding and assurance process. There are no tiered commercial pricing
+  plans; access is governed by organisational agreements and clinical safety
+  assurance rather than subscription fees.
+url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
+plans:
+  - name: Sandbox / Development
+    description: >-
+      Open, self-service access to sandbox environments for all NHS APIs. No
+      registration required for the sandbox. Developers can explore endpoints,
+      test integrations, and review mock responses without credentials.
+    url: https://digital.nhs.uk/developer/guides-and-documentation/testing
+    access: open
+    rate-limits:
+      requests-per-minute: not-specified
+    features:
+      - Mock patient data
+      - Full FHIR endpoint coverage
+      - No authentication required for most sandboxes
+      - Free to use
+
+  - name: Integration / Testing
+    description: >-
+      Access to NHS integration (int) test environments for organisations that
+      have registered with NHS Digital and received test credentials. Requires
+      completing the initial Digital Onboarding Service application and receiving
+      NHS England approval.
+    url: https://digital.nhs.uk/developer/guides-and-documentation/digital-onboarding
+    access: registered
+    requirements:
+      - Organisation Data Service (ODS) code
+      - NHS Data Security and Protection Toolkit completion
+      - Digital Onboarding Service application
+    rate-limits:
+      requests-per-minute: not-specified
+    features:
+      - Real integration test environment
+      - NHS CIS2 test credentials
+      - Clinical safety review (if required)
+      - Free to use
+
+  - name: Production
+    description: >-
+      Live production access for approved NHS organisations and technology
+      suppliers. Requires full onboarding assurance including technical, clinical
+      safety, information governance, and security reviews. Access is governed
+      by a signed agreement with NHS England.
+    url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
+    access: approved
+    requirements:
+      - Completed onboarding assurance
+      - Signed data sharing or connection agreement
+      - Clinical safety case (DCB0129 / DCB0160 where applicable)
+      - Information governance compliance
+      - DTAC (Digital Technology Assessment Criteria) assessment
+    rate-limits:
+      requests-per-minute: not-specified
+    features:
+      - Live NHS patient data access (where authorised)
+      - OAuth 2.0 / private-key JWT production credentials
+      - NHS CIS2 Care Identity (for healthcare workers)
+      - NHS login (for patients)
+      - API key (for application-restricted APIs)
+      - Free to use

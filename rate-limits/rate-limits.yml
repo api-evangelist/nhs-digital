@@ -1,0 +1,72 @@
+name: NHS Digital API Rate Limits
+description: >-
+  NHS England Digital does not publish specific numeric rate limits in its
+  public documentation. Rate limiting is applied by the NHS API platform on a
+  per-API, per-environment basis. Production rate limits are defined within
+  individual API agreements and communicated during onboarding. Sandbox
+  environments have their own fair-use limits to prevent abuse.
+url: https://digital.nhs.uk/developer/guides-and-documentation
+rate-limits:
+  - name: Sandbox Environment
+    environment: sandbox
+    description: >-
+      Sandbox APIs at sandbox.api.service.nhs.uk are subject to fair-use rate
+      limiting. Specific thresholds are not published but are enforced to
+      prevent abuse and ensure availability for all developers.
+    requests-per-minute: not-published
+    requests-per-day: not-published
+    notes: Contact api.management@nhs.net for sandbox throttling details.
+
+  - name: Integration Environment
+    environment: integration
+    description: >-
+      The integration (int) test environment applies rate limits similar to
+      production but at lower thresholds appropriate for development and
+      testing. Limits are communicated to approved organisations during the
+      onboarding process.
+    requests-per-minute: not-published
+    notes: Communicated during Digital Onboarding Service approval.
+
+  - name: Production Environment
+    environment: production
+    description: >-
+      Production rate limits are defined per API and per organisation in the
+      connection or data sharing agreement signed during onboarding. Limits vary
+      by API sensitivity, data classification, and agreed usage volumes.
+    requests-per-minute: not-published
+    notes: >-
+      Defined in individual API agreements. Organisations with high-volume
+      requirements should contact NHS England to discuss capacity planning.
+
+authentication-methods:
+  - name: API Key (Application-Restricted)
+    description: >-
+      Simple API key passed as a header for lower-sensitivity application-
+      restricted APIs. Used where no end-user authentication is required.
+    header: apikey
+    docs: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/application-restricted-restful-apis-api-key-authentication
+
+  - name: OAuth 2.0 Client Credentials (Private Key JWT)
+    description: >-
+      The primary method for application-restricted APIs handling personal or
+      sensitive data. The application signs a JWT with its private key and
+      exchanges it for an access token via the NHS Identity Service.
+    grant-type: client_credentials
+    token-url: https://api.service.nhs.uk/oauth2/token
+    docs: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/application-restricted-restful-apis-signed-jwt-authentication
+
+  - name: NHS CIS2 Care Identity (User-Restricted)
+    description: >-
+      For APIs accessed by authenticated NHS healthcare workers. Uses the NHS
+      Care Identity Service 2 (CIS2) with smartcard or modern authentication.
+      Implements OAuth 2.0 authorisation code flow.
+    grant-type: authorization_code
+    docs: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-cis2-separate-authentication-and-authorisation
+
+  - name: NHS Login (Patient-Restricted)
+    description: >-
+      For APIs accessed by patients or members of the public. Implements OpenID
+      Connect over OAuth 2.0 with identity proofing levels P5, P9, and P10.
+    grant-type: authorization_code
+    token-url: https://api.service.nhs.uk/oauth2/token
+    docs: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-login

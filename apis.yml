@@ -1,0 +1,433 @@
+name: NHS Digital
+description: >-
+  NHS England Digital is the national provider of digital health technology for
+  the NHS in England. It delivers a comprehensive suite of REST and FHIR APIs
+  covering patient demographic services, personal demographics, electronic
+  prescriptions, summary care records, referrals and bookings, GP Connect,
+  vaccination records, and national clinical data services. APIs are hosted on
+  the NHS API platform at api.service.nhs.uk with sandbox and production
+  environments, supporting OAuth 2.0 / private-key JWT, NHS CIS2 Care Identity,
+  NHS login, and API-key authentication patterns.
+image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+tags:
+  - NHS
+  - health
+  - FHIR
+  - UK
+  - patient demographics
+  - prescriptions
+  - referrals
+  - clinical data
+  - digital health
+  - government
+url: https://digital.nhs.uk/developer
+baseURL: https://api.service.nhs.uk
+contact:
+  - FN: NHS England Developer Support
+    email: api.management@nhs.net
+    url: https://digital.nhs.uk/developer/help-and-support
+maintainers:
+  - FN: NHS England Digital
+    email: api.management@nhs.net
+    url: https://digital.nhs.uk/developer
+specificationVersion: "0.19"
+apis:
+  - name: Personal Demographics Service - FHIR API
+    description: >-
+      Access the national NHS patient demographic database. Supports search,
+      retrieval, and update of patient records including names, addresses, dates
+      of birth, registered GPs, nominated pharmacies, and NHS numbers. Offers
+      application-restricted, healthcare-worker, and patient access tiers.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+    baseURL: https://api.service.nhs.uk/personal-demographics
+    tags:
+      - demographics
+      - patients
+      - FHIR
+      - NHS number
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+      - type: github
+        url: https://github.com/NHSDigital/personal-demographics-service-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/personal-demographics
+      - type: access-tiers
+        value: application-restricted, healthcare-worker, patient
+
+  - name: Electronic Prescription Service - FHIR API
+    description: >-
+      Transmit electronic prescriptions between prescribers and community
+      dispensers. Prescribers can create, encode, and cancel prescriptions;
+      dispensers can download prescriptions, manage dispense notifications, and
+      submit claims to the NHS Business Services Authority.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+    baseURL: https://api.service.nhs.uk/electronic-prescriptions
+    tags:
+      - prescriptions
+      - medications
+      - FHIR
+      - pharmacy
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
+      - type: github
+        url: https://github.com/NHSDigital/electronic-prescription-service-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/electronic-prescriptions
+
+  - name: Summary Care Record - FHIR API
+    description: >-
+      Access a patient's Summary Care Record (SCR), a national electronic record
+      of key clinical information derived from GP records. Also provides access
+      to the Access Control Service (ACS) for managing patient consent to share
+      SCR data.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
+    baseURL: https://api.service.nhs.uk/summary-care-records
+    tags:
+      - clinical records
+      - summary care record
+      - FHIR
+      - GP records
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/summary-care-records
+
+  - name: National Record Locator - FHIR API
+    description: >-
+      Locate and access patient information shared by other NHS healthcare
+      organisations to support direct patient care. Supports both producer and
+      consumer roles, enabling providers to publish record pointers and consumers
+      to search by patient, information type, provider, or record ID.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir
+    baseURL: https://api.service.nhs.uk/record-locator
+    tags:
+      - records
+      - FHIR
+      - interoperability
+      - clinical data
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir
+      - type: github
+        url: https://github.com/NHSDigital/national-record-locator-consumer-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/record-locator
+
+  - name: Booking and Referral - FHIR API
+    description: >-
+      Send booking and referral information between NHS service providers
+      following the NHS Booking and Referral Standard (BaRS). Enables
+      interoperable bookings and referrals across urgent and emergency care,
+      primary care, and other NHS settings.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+    baseURL: https://api.service.nhs.uk/booking-and-referral
+    tags:
+      - referrals
+      - bookings
+      - FHIR
+      - urgent care
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
+      - type: github
+        url: https://github.com/NHSDigital/booking-and-referral-fhir-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/booking-and-referral
+
+  - name: GP Connect Appointment Management - FHIR API
+    description: >-
+      Manage appointments across GP practices. Enables third-party systems to
+      search for available slots, book appointments, amend or cancel bookings,
+      and retrieve appointment details via a FHIR STU3 API hosted by GP
+      practice systems.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir
+    baseURL: https://api.service.nhs.uk/gp-connect
+    tags:
+      - GP
+      - appointments
+      - FHIR
+      - primary care
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+
+  - name: e-Referral Service - FHIR API
+    description: >-
+      Interact with the NHS e-Referral Service (e-RS), the national paperless
+      referral system for primary and secondary care. Supports creating and
+      managing referrals, retrieving available service slots, and processing
+      referral responses.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+    baseURL: https://api.service.nhs.uk/referrals
+    tags:
+      - referrals
+      - FHIR
+      - secondary care
+      - e-RS
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
+      - type: github
+        url: https://github.com/NHSDigital/e-referrals-service-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/referrals
+
+  - name: Immunisation History - FHIR API
+    description: >-
+      Retrieve a patient's immunisation history recorded in NHS national systems.
+      Supports clinical decision-making, care continuity, and patient-facing
+      applications by providing structured vaccination records compliant with
+      FHIR R4.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir
+    baseURL: https://api.service.nhs.uk/immunisation-history
+    tags:
+      - immunisation
+      - vaccination
+      - FHIR
+      - clinical data
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/immunisation-history
+
+  - name: NHS App API
+    description: >-
+      Engage with users of the NHS App, enabling healthcare organisations and
+      suppliers to send in-app messages, manage notifications, and trigger
+      communications to patients who have the NHS App installed on their device.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-app
+    baseURL: https://api.service.nhs.uk/nhs-app
+    tags:
+      - NHS App
+      - notifications
+      - patient communications
+      - FHIR
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/nhs-app
+      - type: github
+        url: https://github.com/NHSDigital/nhs-app-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/nhs-app
+
+  - name: Directory of Healthcare Services (Service Search) API
+    description: >-
+      Search for NHS healthcare services across England including GPs, dentists,
+      opticians, hospitals, pharmacies, and other care settings. Returns
+      structured service information, location data, opening hours, and referral
+      pathways.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services
+    baseURL: https://api.service.nhs.uk/service-search
+    tags:
+      - directory
+      - healthcare services
+      - search
+      - REST
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/service-search
+
+  - name: NHS Login API
+    description: >-
+      Authenticate patients and members of the public using NHS login, the
+      national identity service for patient-facing digital health services in
+      England. Implements OpenID Connect and OAuth 2.0 supporting P5, P9, and
+      P10 identity proofing levels.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+    baseURL: https://api.service.nhs.uk/oauth2
+    tags:
+      - authentication
+      - identity
+      - OAuth 2.0
+      - OpenID Connect
+      - patients
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/nhs-login
+      - type: github
+        url: https://github.com/NHSDigital/identity-service-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/oauth2
+
+  - name: Spine Directory Service - FHIR API
+    description: >-
+      Query the Spine Directory Service (SDS) to look up endpoint information,
+      organisation codes, and service metadata for NHS organisations and systems
+      registered on the NHS Spine. Supports routing decisions for Spine
+      messaging and integration.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+    baseURL: https://api.service.nhs.uk/spine-directory
+    tags:
+      - Spine
+      - directory
+      - FHIR
+      - organisations
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
+      - type: github
+        url: https://github.com/NHSDigital/spine-directory-service-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/spine-directory
+
+  - name: Health Research Data Catalogue API
+    description: >-
+      Retrieve metadata about NHS health datasets suitable for publication in
+      health research catalogues. Enables researchers and data controllers to
+      discover available NHS datasets, their coverage, data custodians, and
+      access conditions.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
+    baseURL: https://api.service.nhs.uk/health-research-data-catalogue
+    tags:
+      - research
+      - datasets
+      - metadata
+      - REST
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+
+  - name: NHS Website Content API
+    description: >-
+      Pull content from the NHS.UK website about health conditions, medications,
+      live well guidance, mental health, care and support, and the NHS system.
+      Returns structured JSON content suitable for integration into third-party
+      digital health services.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content/v2
+    baseURL: https://api.service.nhs.uk/nhs-website-content
+    tags:
+      - content
+      - health information
+      - REST
+      - NHS website
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content/v2
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/nhs-website-content
+
+  - name: Message Exchange for Social Care and Health (MESH) API
+    description: >-
+      Exchange messages and data files between NHS organisations using MESH, the
+      national messaging infrastructure. Supports sending and receiving
+      structured clinical messages, bulk data transfers, and real-time event
+      notifications between Spine-connected systems.
+    image: https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png
+    humanURL: https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api
+    baseURL: https://api.service.nhs.uk/mesh-mailbox
+    tags:
+      - messaging
+      - MESH
+      - interoperability
+      - data exchange
+    properties:
+      - type: documentation
+        url: https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api
+    contact:
+      - FN: NHS England Developer Support
+        url: https://digital.nhs.uk/developer/help-and-support
+    meta:
+      - type: environment-sandbox
+        value: https://sandbox.api.service.nhs.uk/mesh-mailbox
+
+common:
+  - type: plans
+    url: https://digital.nhs.uk/developer/api-catalogue
+  - type: rate-limits
+    url: https://digital.nhs.uk/developer/guides-and-documentation
+  - type: authentication
+    url: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation
+  - type: onboarding
+    url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
+  - type: digital-onboarding
+    url: https://digital.nhs.uk/developer/guides-and-documentation/digital-onboarding
+  - type: sandbox
+    url: https://sandbox.api.service.nhs.uk
+  - type: developer-portal
+    url: https://digital.nhs.uk/developer
+  - type: api-catalogue
+    url: https://digital.nhs.uk/developer/api-catalogue
+  - type: help
+    url: https://digital.nhs.uk/developer/help-and-support
+  - type: developer-community
+    url: https://developer.community.nhs.uk
+  - type: github
+    url: https://github.com/NHSDigital
+  - type: terms-of-use
+    url: https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy
+  - type: api-platform
+    url: https://digital.nhs.uk/services/api-platform

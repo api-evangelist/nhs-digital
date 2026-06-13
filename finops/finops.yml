@@ -1,0 +1,59 @@
+name: NHS Digital API FinOps
+description: >-
+  NHS England Digital APIs are provided free of charge as a public service to
+  support healthcare interoperability across England. There are no subscription
+  fees, usage-based charges, or commercial pricing tiers. Costs associated with
+  API usage are internal NHS infrastructure costs borne by NHS England.
+  Third-party organisations integrating with NHS APIs bear their own development,
+  hosting, and operational costs for their systems but pay nothing to NHS England
+  for API access.
+url: https://digital.nhs.uk/services/api-platform
+model: free-at-point-of-use
+pricing:
+  api-access-fee: 0
+  currency: GBP
+  notes: >-
+    All NHS Digital APIs are free to access for organisations that complete
+    the onboarding and assurance process. The API service is described by
+    NHS England as "free and available to anyone" who meets the eligibility
+    criteria.
+
+cost-considerations:
+  - category: Development
+    description: >-
+      Internal development and integration costs are borne by the connecting
+      organisation or their technology supplier.
+
+  - category: Onboarding
+    description: >-
+      The onboarding and assurance process requires staff time for completing
+      the NHS Data Security and Protection Toolkit, DTAC assessment, clinical
+      safety documentation, and Digital Onboarding Service application. No
+      direct fee is charged by NHS England for this process.
+
+  - category: Infrastructure
+    description: >-
+      Connecting organisations are responsible for their own hosting,
+      connectivity (including N3/HSCN network access where required), and
+      operational infrastructure costs.
+
+  - category: HSCN Connectivity
+    description: >-
+      Some NHS APIs (particularly older Spine-connected services) require
+      Health and Social Care Network (HSCN) connectivity, which has its own
+      connection fees charged by network service providers.
+    url: https://digital.nhs.uk/services/health-and-social-care-network
+
+  - category: Certification
+    description: >-
+      Clinical safety assessments (DCB0129 for manufacturers, DCB0160 for
+      health organisations) may require third-party clinical safety officer
+      (CSO) engagement, which has associated professional service costs.
+
+value-for-money:
+  notes: >-
+    NHS Digital APIs provide access to national-scale patient data infrastructure
+    including patient demographics (PDS), prescriptions (EPS), referrals (e-RS),
+    and care records at no direct cost to integrators. This significantly reduces
+    the data infrastructure investment required for NHS-connected digital health
+    products.
