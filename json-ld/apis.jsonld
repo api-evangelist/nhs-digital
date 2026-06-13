@@ -1,0 +1,160 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "api": "https://apis.io/vocab#",
+    "nhs": "https://digital.nhs.uk/vocab#"
+  },
+  "@type": "Organization",
+  "@id": "https://digital.nhs.uk/developer",
+  "name": "NHS England Digital",
+  "description": "NHS England Digital is the national provider of digital health technology for the NHS in England.",
+  "url": "https://digital.nhs.uk/developer",
+  "logo": "https://digital.nhs.uk/binaries/content/gallery/website/about-nhs-digital/nhs-digital-og.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "api.management@nhs.net",
+    "url": "https://digital.nhs.uk/developer/help-and-support",
+    "contactType": "technical support"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "NHS API Catalogue",
+    "url": "https://digital.nhs.uk/developer/api-catalogue",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Personal Demographics Service - FHIR API",
+        "description": "Access the national NHS patient demographic database. Supports search, retrieval, and update of patient records.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir",
+        "featureList": ["demographics", "patients", "FHIR", "NHS number"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Electronic Prescription Service - FHIR API",
+        "description": "Transmit electronic prescriptions between prescribers and community dispensers.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir",
+        "featureList": ["prescriptions", "medications", "FHIR", "pharmacy"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Summary Care Record - FHIR API",
+        "description": "Access a patient's Summary Care Record, a national electronic record of key clinical information.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir",
+        "featureList": ["clinical records", "summary care record", "FHIR", "GP records"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "National Record Locator - FHIR API",
+        "description": "Locate and access patient information shared by other NHS healthcare organisations.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir",
+        "featureList": ["records", "FHIR", "interoperability", "clinical data"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Booking and Referral - FHIR API",
+        "description": "Send booking and referral information between NHS service providers following the NHS Booking and Referral Standard (BaRS).",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir",
+        "featureList": ["referrals", "bookings", "FHIR", "urgent care"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "GP Connect Appointment Management - FHIR API",
+        "description": "Manage appointments across GP practices via a FHIR STU3 API.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir",
+        "featureList": ["GP", "appointments", "FHIR", "primary care"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "e-Referral Service - FHIR API",
+        "description": "Interact with the NHS e-Referral Service, the national paperless referral system for primary and secondary care.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir",
+        "featureList": ["referrals", "FHIR", "secondary care", "e-RS"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Immunisation History - FHIR API",
+        "description": "Retrieve a patient's immunisation history recorded in NHS national systems.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir",
+        "featureList": ["immunisation", "vaccination", "FHIR", "clinical data"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "NHS App API",
+        "description": "Engage with users of the NHS App via in-app messages and native push notifications.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/nhs-app",
+        "featureList": ["NHS App", "notifications", "patient communications", "FHIR"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Directory of Healthcare Services (Service Search) API",
+        "description": "Search for NHS healthcare services across England.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services",
+        "featureList": ["directory", "healthcare services", "search", "REST"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "NHS Login API",
+        "description": "Authenticate patients using NHS login implementing OpenID Connect and OAuth 2.0.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/nhs-login",
+        "featureList": ["authentication", "identity", "OAuth 2.0", "OpenID Connect", "patients"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Spine Directory Service - FHIR API",
+        "description": "Query the Spine Directory Service to look up endpoint information and service metadata for NHS organisations.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir",
+        "featureList": ["Spine", "directory", "FHIR", "organisations"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Health Research Data Catalogue API",
+        "description": "Retrieve metadata about NHS health datasets suitable for publication in health research catalogues.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue",
+        "featureList": ["research", "datasets", "metadata", "REST"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "NHS Website Content API",
+        "description": "Pull structured content from the NHS.UK website about health conditions, medications, and guidance.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/nhs-website-content/v2",
+        "featureList": ["content", "health information", "REST", "NHS website"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "Message Exchange for Social Care and Health (MESH) API",
+        "description": "Exchange messages and data files between NHS organisations using MESH national messaging infrastructure.",
+        "url": "https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api",
+        "featureList": ["messaging", "MESH", "interoperability", "data exchange"]
+      }
+    ]
+  },
+  "sameAs": [
+    "https://github.com/NHSDigital"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "England"
+  },
+  "api:baseURL": "https://api.service.nhs.uk",
+  "api:sandboxURL": "https://sandbox.api.service.nhs.uk",
+  "api:authentication": ["OAuth 2.0", "private-key JWT", "NHS CIS2 Care Identity", "NHS login", "API-key"],
+  "api:catalogue": "https://digital.nhs.uk/developer/api-catalogue",
+  "api:platform": "https://digital.nhs.uk/services/api-platform",
+  "api:onboarding": "https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process",
+  "api:community": "https://developer.community.nhs.uk"
+}
