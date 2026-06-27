@@ -47,7 +47,7 @@ apis:
       - FHIR
       - NHS number
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
       - type: github
         url: https://github.com/NHSDigital/personal-demographics-service-api
@@ -75,7 +75,7 @@ apis:
       - FHIR
       - pharmacy
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
       - type: github
         url: https://github.com/NHSDigital/electronic-prescription-service-api
@@ -101,7 +101,7 @@ apis:
       - FHIR
       - GP records
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
     contact:
       - FN: NHS England Developer Support
@@ -125,7 +125,7 @@ apis:
       - interoperability
       - clinical data
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/national-record-locator-fhir
       - type: github
         url: https://github.com/NHSDigital/national-record-locator-consumer-api
@@ -151,7 +151,7 @@ apis:
       - FHIR
       - urgent care
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir
       - type: github
         url: https://github.com/NHSDigital/booking-and-referral-fhir-api
@@ -177,7 +177,7 @@ apis:
       - FHIR
       - primary care
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/gp-connect-appointment-management-fhir
     contact:
       - FN: NHS England Developer Support
@@ -198,7 +198,7 @@ apis:
       - secondary care
       - e-RS
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir
       - type: github
         url: https://github.com/NHSDigital/e-referrals-service-api
@@ -224,7 +224,7 @@ apis:
       - FHIR
       - clinical data
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/immunisation-history-fhir
     contact:
       - FN: NHS England Developer Support
@@ -247,7 +247,7 @@ apis:
       - patient communications
       - FHIR
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/nhs-app
       - type: github
         url: https://github.com/NHSDigital/nhs-app-api
@@ -273,7 +273,7 @@ apis:
       - search
       - REST
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services
     contact:
       - FN: NHS England Developer Support
@@ -298,7 +298,7 @@ apis:
       - OpenID Connect
       - patients
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/nhs-login
       - type: github
         url: https://github.com/NHSDigital/identity-service-api
@@ -324,7 +324,7 @@ apis:
       - FHIR
       - organisations
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-fhir
       - type: github
         url: https://github.com/NHSDigital/spine-directory-service-api
@@ -350,7 +350,7 @@ apis:
       - metadata
       - REST
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
     contact:
       - FN: NHS England Developer Support
@@ -371,7 +371,7 @@ apis:
       - REST
       - NHS website
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content/v2
     contact:
       - FN: NHS England Developer Support
@@ -395,7 +395,7 @@ apis:
       - interoperability
       - data exchange
     properties:
-      - type: documentation
+      - type: Documentation
         url: https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api
     contact:
       - FN: NHS England Developer Support
@@ -405,19 +405,19 @@ apis:
         value: https://sandbox.api.service.nhs.uk/mesh-mailbox
 
 common:
-  - type: plans
+  - type: Plans
     url: https://digital.nhs.uk/developer/api-catalogue
-  - type: rate-limits
+  - type: RateLimits
     url: https://digital.nhs.uk/developer/guides-and-documentation
-  - type: authentication
+  - type: Authentication
     url: https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation
-  - type: onboarding
+  - type: GettingStarted
     url: https://digital.nhs.uk/developer/guides-and-documentation/onboarding-process
   - type: digital-onboarding
     url: https://digital.nhs.uk/developer/guides-and-documentation/digital-onboarding
-  - type: sandbox
+  - type: Sandbox
     url: https://sandbox.api.service.nhs.uk
-  - type: developer-portal
+  - type: DeveloperPortal
     url: https://digital.nhs.uk/developer
   - type: api-catalogue
     url: https://digital.nhs.uk/developer/api-catalogue
@@ -427,7 +427,7 @@ common:
     url: https://developer.community.nhs.uk
   - type: github
     url: https://github.com/NHSDigital
-  - type: terms-of-use
+  - type: TermsOfService
     url: https://onboarding.prod.api.platform.nhs.uk/PolicyPages/TermsOfUsePolicy
   - type: api-platform
     url: https://digital.nhs.uk/services/api-platform
