@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/booking-and-referral-fhir-api.yaml, openapi/e-referrals-service-api.yaml
+summary:
+  types:
+  - http
+schemes:
+- name: OAuth_Token
+  type: http
+  scheme: bearer
+  sources:
+  - openapi/booking-and-referral-fhir-api.yaml
+  - openapi/e-referrals-service-api.yaml

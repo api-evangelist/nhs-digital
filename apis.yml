@@ -405,6 +405,12 @@ apis:
         value: https://sandbox.api.service.nhs.uk/mesh-mailbox
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/nhs-digital-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/nhs-digital-domain-security.yml
+  - type: Authentication
+    url: authentication/nhs-digital-authentication.yml
   - type: Plans
     url: https://digital.nhs.uk/developer/api-catalogue
   - type: RateLimits
