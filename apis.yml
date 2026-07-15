@@ -405,6 +405,8 @@ apis:
         value: https://sandbox.api.service.nhs.uk/mesh-mailbox
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/nhs-digital-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/nhs-digital-vulnerability-disclosure.yml
   - type: DomainSecurity
