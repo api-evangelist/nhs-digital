@@ -1,0 +1,28 @@
+{
+  "provider": "nhs-digital",
+  "sources": [
+    "nhs-digital-booking-api-openapi.yml",
+    "nhs-digital-communication-api-openapi.yml",
+    "nhs-digital-message-api-openapi.yml",
+    "nhs-digital-metadata-api-openapi.yml",
+    "nhs-digital-r4-api-openapi.yml",
+    "nhs-digital-referral-api-openapi.yml",
+    "nhs-digital-slots-api-openapi.yml",
+    "nhs-digital-stu3-api-openapi.yml"
+  ],
+  "outputs": [
+    "nhs-digital-booking-api-openapi.yml",
+    "nhs-digital-communication-api-openapi.yml",
+    "nhs-digital-message-api-openapi.yml",
+    "nhs-digital-metadata-api-openapi.yml",
+    "nhs-digital-r4-api-openapi.yml",
+    "nhs-digital-referral-api-openapi.yml",
+    "nhs-digital-slots-api-openapi.yml",
+    "nhs-digital-stu3-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
