@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Referral Booking Metadata API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get capability statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/metadata",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "\n### Returns the target endpoints CapabilityStatement \n\nThe sender must initially request the receiver's [CapabilityStatement](https://www.hl7.org/fhir/capabilitystatement.html) (GET /metadata) to establish how to interact with the receivers API (its capabilities). If the receiver does not support BaRS functionality the BaRS API will provide an error response to indicate this and the sender will pursue an alternative workflow. \n\nA receiver may only implement a subset of the functionality within "
+        },
+        {
+          "info": {
+            "name": "Get Message Definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/MessageDefinition",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "context",
+                "value": "",
+                "type": "query",
+                "description": "The target service identifier. Allowing the ability to filter returned message definitions by the specified service id. In this example a DoS id. The preferred format is system|value however a value should be accepted and honoured as per [FHIR guidance](https://www.hl7.org/fhir/search.html#token).\n"
+              }
+            ]
+          },
+          "docs": "\n### Returns MessageDefinitions supported by the target endpoint\n\nThe Message Definition retrieval is required to inform a Sender on building the payload. A request is made using the Service Identifier and workflow type values, linking to the useContext and event elements, respectively, in the Message Definition resource, returning a list of FHIR resources. \n\nThe order of workflow beyond this point is relatively flexible, the only stipulation being responses occurring after requests.\n\n### Sender"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Referral Booking API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Booking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get bookings for a patient",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/Appointment",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "patient:identifier",
+                "value": "",
+                "type": "query",
+                "description": "The patient's NHS number. The primary identifier of a patient across systems, unique to NHS England and Wales.\n\n|Type           |Expression|\n|-------             | --------|\n|[token](https://hl7.org/implement/standards/FHIR/search.html#token) |Appointment.participant.actor:identifier |\n"
+              }
+            ]
+          },
+          "docs": "\n### Returns bookings for a specified patient\nUse this endpoint to get all bookings for a given patient. All bookings for the specified patient at the specified target endpoint will be returned. \n\nIf a sender wants to cancel a particular booking, they must perform a read first, comparing and amending the details prior to performing the update.\n"
+        },
+        {
+          "info": {
+            "name": "Get a specific booking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/Appointment/:id",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the registry object."
+              }
+            ]
+          },
+          "docs": "\n### Returns specific booking by id\nUse this endpoint to get a specific booking by its unique id. A booking with the specified identifier at the specified target endpoint will be returned, should it exist. \n\nIf a sender wants to cancel a booking, they must perform a read first, comparing and amending the details prior to performing the update.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

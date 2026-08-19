@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Referral Booking communication API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "communication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send an in-app message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/communication/in-app/FHIR/R4/CommunicationRequest",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-ID",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "## Overview\nUse this endpoint to send an in-app message followed by an associated native Apple or Android push notification to a single NHS App user.\n\nPush notifications will not be sent to users between the hours of 10pm and 6am UK time. If a valid request to send an in-app message with an associated push notification is processed between these hours, the in-app message will be delivered immediately, and the push notification will be scheduled for delivery at 6am.\n\nRecipients are specified by N"
+        },
+        {
+          "info": {
+            "name": "Send a push notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/communication/notification/FHIR/R4/CommunicationRequest",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-ID",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "## Overview\nUse this endpoint to send a native Apple or Android push notifications to mobile devices registered by specific users of the NHS App.\n\nPush notifications will not be sent to users between the hours of 10pm and 6am UK time. If a valid request to send a push notification is processed between these hours, the push notification will be scheduled for delivery at 6am.\n\nRecipients are specified by NHS number. A single request to this endpoint can send a push notification to a single NHS num"
+        },
+        {
+          "info": {
+            "name": "Get a daily receipt report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/communication/report/receipts/FHIR/R4/Task",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "day",
+                "value": "2022-08-22",
+                "type": "query",
+                "description": "The day for which to retrieve a receipt report."
+              },
+              {
+                "name": "page",
+                "value": "2",
+                "type": "query",
+                "description": "The ordinal number of the page of results to be retrieved. If omitted, the first page of results will be returned. Use the Link header in the response to determine whether any further pages of results exist."
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to get a daily report of receipts relating to in-app messages and push notifications that you have sent to NHS App users.\n\nThis report will include receipts detailing the outcome of an attempt to send each communication. For in-app messages, a receipt will also be included in this report if the recipient reads the message.\n\nThe following five types of receipt may be included in this response:\n\n* `Rejected` – a request to send a communication was rejected. For exampl"
+        },
+        {
+          "info": {
+            "name": "Get details of NHS App users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/communication/report/patients",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ods-organisation-code",
+                "value": "Y00001",
+                "type": "query",
+                "description": "The Organisation Data Service (ODS) code of the GP practice for which to retrieve a list of NHS App users.\nNot case sensitive.\n"
+              },
+              {
+                "name": "page",
+                "value": "2",
+                "type": "query",
+                "description": "The ordinal number of the page of results to be retrieved. If omitted, the first page of results will be returned. Use the Link header in the response to determine whether any further pages of results exist."
+              }
+            ]
+          },
+          "docs": "## Overview\nUse this endpoint to get details of patients registered with the NHS App for a given GP surgery, and an indication of whether they have enabled push notifications on one or more devices. The response will only include patients who have had their identity verified to 'high' (P9) level.\n\nClient applications must only invoke this endpoint as agreed with the NHS App team, typically to retrieve details of patients at GP practices where their service is available.\n\nThis information can be "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

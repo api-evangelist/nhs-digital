@@ -1,0 +1,128 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Booking Referral API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Referral",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get referral/s for a patient",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/ServiceRequest",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "patient:identifier",
+                "value": "",
+                "type": "query",
+                "description": "The patient's NHS number. The primary identifier of a patient across systems, unique to NHS England and Wales.\n\n|Type           |Expression|\n|-------             | --------|\n|[token](https://hl7.org/implement/standards/FHIR/search.html#token) |Appointment.participant.actor:identifier |\n"
+              },
+              {
+                "name": "ServiceRequest.identifier",
+                "value": "",
+                "type": "query",
+                "description": "The unique booking reference number of the refferal, or the Unique GUID/UUID of the referral request. This is not the same as ServiceRequest.id. The preferred format is system|value however a value should be accepted and honoured as per [FHIR guidance](https://www.hl7.org/fhir/search.html#token).\n     \n|Type           |Expression|\n|-------             | --------|\n|[token](https://hl7.org/fhir/R4/servicerequest.html#search) |ServiceRequest.identifier |\n"
+              }
+            ]
+          },
+          "docs": "\n### Returns service requests for a specified patient\n\nUse this endpoint to get all service requests for a given patient. All service requests for the specified patient at the specified target endpoint will be returned. \n\nIf a sender wants to cancel a service request, they must perform a read first and amend the response version when updating.\n"
+        },
+        {
+          "info": {
+            "name": "Get a specific referral",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/ServiceRequest/:id",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The identifier of the registry object."
+              }
+            ]
+          },
+          "docs": "\n### Returns specific service request by id\nUse this endpoint to get a specific service request by its unique id. A service request with the specified identifier at the specified target endpoint will be returned, should it exist. \n\nIf a sender wants to cancel a service request, they must perform a read first, comparing and amending the details prior to performing the update.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

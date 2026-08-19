@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Referral Booking Message API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Message",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Process a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/$process-message",
+            "headers": [
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              },
+              {
+                "name": "use-context",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "\n### Using $process-message\nThe inherent flexibility of the various workflows supported by BaRS is facilitated by the $process-message endpoint. The example in the \"Try this API\" feature for this endpoint is a referral request.\n\n### Function\n| Function| API Call|Description\n| ----                              | ----                   | ----                 |\n| Making a referral request         | POST /$process-message | The sender will POST a FHIR Bundle, including the FHIR resources defined in "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

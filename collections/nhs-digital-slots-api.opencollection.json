@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "and Referral Booking Slots API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Slots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get slots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://sandbox.api.service.nhs.uk/booking-and-referral/FHIR/R4/Slot",
+            "headers": [
+              {
+                "name": "X-Request-Id",
+                "value": ""
+              },
+              {
+                "name": "X-Correlation-Id",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Target-Identifier",
+                "value": ""
+              },
+              {
+                "name": "NHSD-End-User-Organisation",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Practitioner",
+                "value": ""
+              },
+              {
+                "name": "NHSD-Requesting-Software",
+                "value": ""
+              },
+              {
+                "name": "Accept",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "Status values that need to be considered for filter. \n\nIf attempting to filter by multiple status' they must be separated with commas as opposed to defining the query parameter twice as defined in [FHIR Guidance](https://hl7.org/fhir/search.html#combining)\n\nFor example \"GET [base]/Slot?status=free,busy\".  \n"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Slot start date/time (yyyy-mm-ddThh:mm:ss+00:00).\nTo search for time windows within which Slots must start, use \"greater than\" and \"less than\" searching.\n\nFor example \"GET [base]/Slot?start=ge2022-03-01T12:00:00+00:00&start=le2022-03-01T13:30:00+00:00\". \nThe definition of the time window within which Slots are requested is provided by using this parameter twice.\nThe values must include an offset indicating UTC in the [FHIR dateTime format](https://www.hl7.org/fhir/datatypes.html#primitive). This is the case for all dateTimes in the BaRS standard.\n"
+              },
+              {
+                "name": "Schedule.actor:HealthcareService",
+                "value": "",
+                "type": "query",
+                "description": "A single service ID can be provided to indicate the service for which appointment slots are returned for.\n"
+              },
+              {
+                "name": "_include",
+                "value": "",
+                "type": "query",
+                "description": "Inclusions that drive the rescusive depth of the search. There is a minimum of the following _include parameters required for current Applications.\n* Slot:schedule\n* Schedule:actor:HealthcareService            \n\n**Note**: Both _include and _revinclude share the same syntax - up to three components, separated by colon characters (:). \nUnlike search queries, this is not a FHIRPath expression\nThe full list of applicable _includes are shown below. If any cannot be honored the Receiver will respond, ignoring the unsupported _include(s), with the url reflecting this omission in the responses Bundle.link.url. \n\n|Expression | Inclusion     |Description|\n|-------    |--------       |-------- |\n| Slot:schedule                    | Schedule           | Include Schedule Resources referenced within the  Slot Resources|\n| Schedule:actor:Practitioner      | Practitioner       | Include Practitioner Resources referenced within the  Schedule Resources|\n| Schedule:actor:PractitionerRole  | PractitionerRole   | Include Practitioner Role Resources referenced within the  Schedule Resources |\n| Schedule:actor:HealthcareService | HealthcareService  | Include HealthcareService Resources referenced within the  Schedule Resources|\n| HealthcareService:providedBy     | ProvidedBy         | Include Organization Resources referenced within the  HealthcareService Resources|\n| HealthcareService:location       | Location           | Include Location Resources referenced within the  HealthcareService Resources|\n"
+              }
+            ]
+          },
+          "docs": "\n### Get available slots\n\nA call to Slots is for querying a target endpoint for suitable slots to book a new Appointment into for a patient. \nA request for slots support various filter parameters but requires the service identifier, slot status(es) and a timeframe to limit the search. \n\nAs documented in the [NHS Booking Standard](https://developer.nhs.uk/apis/uec-appointments/fs_slotmanagement.html), a receiver assigns the service identifier to groups of slots, under a schedule, which ties sched"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
