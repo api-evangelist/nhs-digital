@@ -43,7 +43,7 @@ maintainers:
   - FN: NHS England Digital
     email: api.management@nhs.net
     url: https://digital.nhs.uk/developer
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 apis:
 - name: Personal Demographics Service - FHIR API
   description: >-
