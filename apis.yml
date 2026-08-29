@@ -8,6 +8,18 @@ description: >-
   the NHS API platform at api.service.nhs.uk with sandbox and production
   environments, supporting OAuth 2.0 / private-key JWT, NHS CIS2 Care Identity,
   NHS login, and API-key authentication patterns.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
