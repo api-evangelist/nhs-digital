@@ -586,6 +586,9 @@ apis:
   - type: OpenAPI
     url: openapi/nhs-digital-stu3-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/nhs-digital-capability-edges.yml
+    name: NHS Digital Business Capability Map
   - type: AgenticAccess
     url: agentic-access/nhs-digital-agentic-access.yml
   - type: VulnerabilityDisclosure
