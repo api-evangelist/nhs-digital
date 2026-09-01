@@ -39,12 +39,12 @@ tags:
   - Health
   - FHIR
   - UK
-  - patient demographics
-  - prescriptions
+  - Patient Demographics
+  - Prescriptions
   - Referrals
-  - clinical data
-  - digital health
-  - government
+  - Clinical Data
+  - Digital Health
+  - Government
 tags_raw:
   - NHS
   - health
@@ -78,7 +78,7 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
   baseURL: https://api.service.nhs.uk/personal-demographics
   tags:
-  - demographics
+  - Demographics
   - Patients
   - FHIR
   - NHS number
@@ -110,10 +110,10 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
   baseURL: https://api.service.nhs.uk/electronic-prescriptions
   tags:
-  - prescriptions
-  - medications
+  - Prescriptions
+  - Medications
   - FHIR
-  - pharmacy
+  - Pharmacy
   tags_raw:
   - prescriptions
   - medications
@@ -140,10 +140,10 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/summary-care-record-fhir
   baseURL: https://api.service.nhs.uk/summary-care-records
   tags:
-  - clinical records
+  - Clinical Records
   - summary care record
   - FHIR
-  - GP records
+  - GP Records
   tags_raw:
   - clinical records
   - summary care record
@@ -170,8 +170,8 @@ apis:
   tags:
   - Records
   - FHIR
-  - interoperability
-  - clinical data
+  - Interoperability
+  - Clinical Data
   tags_raw:
   - records
   - FHIR
@@ -199,9 +199,9 @@ apis:
   baseURL: https://api.service.nhs.uk/booking-and-referral
   tags:
   - Referrals
-  - bookings
+  - Bookings
   - FHIR
-  - urgent care
+  - Urgent Care
   tags_raw:
   - referrals
   - bookings
@@ -231,7 +231,7 @@ apis:
   - GP
   - Appointments
   - FHIR
-  - primary care
+  - Primary Care
   tags_raw:
   - GP
   - appointments
@@ -284,9 +284,9 @@ apis:
   baseURL: https://api.service.nhs.uk/immunisation-history
   tags:
   - immunisation
-  - vaccination
+  - Vaccination
   - FHIR
-  - clinical data
+  - Clinical Data
   tags_raw:
   - immunisation
   - vaccination
@@ -313,7 +313,7 @@ apis:
   tags:
   - NHS App
   - Notification
-  - patient communications
+  - Patient Communications
   - FHIR
   tags_raw:
   - NHS App
@@ -342,7 +342,7 @@ apis:
   baseURL: https://api.service.nhs.uk/service-search
   tags:
   - Directory
-  - healthcare services
+  - Healthcare Services
   - Search
   - REST
   tags_raw:
@@ -403,7 +403,7 @@ apis:
   - Spine
   - Directory
   - FHIR
-  - organisations
+  - Organisations
   tags_raw:
   - Spine
   - directory
@@ -430,7 +430,7 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/health-research-data-catalogue
   baseURL: https://api.service.nhs.uk/health-research-data-catalogue
   tags:
-  - research
+  - Research
   - Datasets
   - Metadata
   - REST
@@ -455,8 +455,8 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/nhs-website-content/v2
   baseURL: https://api.service.nhs.uk/nhs-website-content
   tags:
-  - content
-  - health information
+  - Content
+  - Health Information
   - REST
   - NHS website
   tags_raw:
@@ -485,9 +485,9 @@ apis:
   baseURL: https://api.service.nhs.uk/mesh-mailbox
   tags:
   - Messaging
-  - MESH
-  - interoperability
-  - data exchange
+  - Mesh
+  - Interoperability
+  - Data Exchange
   tags_raw:
   - messaging
   - MESH
