@@ -587,6 +587,8 @@ apis:
   - type: OpenAPI
     url: openapi/nhs-digital-stu3-api-openapi.yml
 common:
+  - type: Website
+    url: https://www.nhs.uk/
   - type: CapabilityMap
     url: capabilities/nhs-digital-capability-edges.yml
     name: NHS Digital Business Capability Map
