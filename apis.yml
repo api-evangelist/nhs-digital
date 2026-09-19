@@ -39,7 +39,7 @@ tags:
   - NHS
   - Health
   - FHIR
-  - UK
+  - United Kingdom
   - Patient Demographics
   - Prescriptions
   - Referrals
@@ -112,7 +112,7 @@ apis:
   baseURL: https://api.service.nhs.uk/electronic-prescriptions
   tags:
   - Prescriptions
-  - Medications
+  - Medication
   - FHIR
   - Pharmacy
   tags_raw:
@@ -200,7 +200,7 @@ apis:
   baseURL: https://api.service.nhs.uk/booking-and-referral
   tags:
   - Referrals
-  - Bookings
+  - Booking
   - FHIR
   - Urgent Care
   tags_raw:
@@ -562,6 +562,8 @@ apis:
   humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
   baseURL: https://api.service.nhs.uk/personal-demographics
   tags:
+  - Referrals
+  tags_raw:
   - Referral
   properties:
   - type: OpenAPI
