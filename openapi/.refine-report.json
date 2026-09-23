@@ -64,7 +64,8 @@
     "e-referrals-service-api.yaml: tagged paths GET /R4/ServiceRequest -> R4",
     "e-referrals-service-api.yaml: declared missing tag: R4",
     "e-referrals-service-api.yaml: declared missing tag: STU3",
-    "nhs-app-api.yaml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0"
+    "nhs-app-api.yaml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "nhs-digital-booking-api-openapi.yml: previously refined output, superseded by openapi/_original/",
