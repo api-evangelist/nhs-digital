@@ -515,7 +515,7 @@ apis:
   - type: OpenAPI
     url: openapi/nhs-digital-booking-api-openapi.yml
 - aid: nhs-digital:nhs-digital-communication-api
-  name: NHS Digital communication API
+  name: NHS Digital Communication API
   description: The communication API from NHS Digital — 4 operation(s) for communication.
   humanURL: https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
   baseURL: https://api.service.nhs.uk/personal-demographics
